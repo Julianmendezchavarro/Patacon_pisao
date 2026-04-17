@@ -1,53 +1,14 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Patacón Pisao</title>
+  <title>Patacon Pisao</title>
 </head>
 <body>
 
-<h1>Menú 🍽️</h1>
-<div id="productos"></div>
+<h1>Bienvenido a Patacon Pisao</h1>
 
-<h2>Total: $<span id="total">0</span></h2>
-<button onclick="hacerPedido()">Hacer pedido</button>
-
-<script>
-let total = 15000;
-
-fetch('http://localhost:3000/productos')
-    .then(res => res.json())
-    .then(data => {
-        const contenedor = document.getElementById('productos');
-
-        data.forEach(p => {
-            const btn = document.createElement('button');
-            btn.innerText = p.nombre + " - $" + p.precio;
-
-            btn.onclick = () => {
-                total += p.precio;
-                document.getElementById('total').innerText = total;
-            };
-
-            contenedor.appendChild(btn);
-            contenedor.appendChild(document.createElement('br'));
-        });
-    });
-
-function hacerPedido() {
-    fetch('http://localhost:3000/pedido', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ total })
-    })
-    .then(res => res.json())
-    .then(data => {
-        alert(data.mensaje);
-        total = 0;
-        document.getElementById('total').innerText = total;
-    });
-}
-</script>
+<a href="login.html">Iniciar sesión</a><br>
+<a href="registro.html">Registrarse</a>
 
 </body>
 </html>
