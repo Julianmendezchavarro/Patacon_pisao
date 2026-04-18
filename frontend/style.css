@@ -769,8 +769,8 @@ label textarea:focus {
 }
 
 .cart-panel {
-  position: sticky;
-  top: 18px;
+  position: relative;
+  align-self: start;
   padding: 22px;
   border-radius: 30px;
   height: fit-content;
