@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro | Patacon Pisao</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="register" class="page-shell auth-body">
+  <div class="bg-noise"></div>
+  <main class="auth-layout auth-layout--reverse">
+    <section class="auth-side" data-tilt>
+      <p class="eyebrow">Nueva cuenta</p>
+      <h1>Deja listo tu acceso para pedir mas rapido y crecer con el proyecto.</h1>
+      <p>
+        El registro te prepara para una experiencia mas completa: carrito persistente, pedidos guardados y una vitrina visual de mejor nivel.
+      </p>
+
+      <div class="auth-side-cards">
+        <article class="auth-side-card">
+          <span class="mini-badge">Pedido agil</span>
+          <strong>Datos precargados en el formulario de compra</strong>
+        </article>
+        <article class="auth-side-card auth-side-card--cool">
+          <span class="mini-badge">Escalable</span>
+          <strong>Base lista para panel admin, fotos y mejoras del flujo</strong>
+        </article>
+      </div>
+    </section>
+
+    <section class="auth-panel">
+      <a class="back-link" href="index.html">Volver al inicio</a>
+      <p class="eyebrow">Crear cuenta</p>
+      <h2>Registrate</h2>
+      <p class="auth-copy">Crea tu acceso y empieza a usar el sistema desde ya.</p>
+
+      <form id="register-form" class="auth-form">
+        <label>
+          Nombre completo
+          <input type="text" name="nombre" placeholder="Tu nombre" required>
+        </label>
+        <label>
+          Correo electronico
+          <input type="email" name="email" placeholder="correo@ejemplo.com" required>
+        </label>
+        <label>
+          Contrasena
+          <input type="password" name="password" placeholder="Minimo 6 caracteres" minlength="6" required>
+        </label>
+        <button class="button primary" type="submit">Crear cuenta</button>
+      </form>
+
+      <p id="register-message" class="form-message"></p>
+      <p class="auth-footer">Ya tienes cuenta? <a href="login.html">Inicia sesion</a>.</p>
+    </section>
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>

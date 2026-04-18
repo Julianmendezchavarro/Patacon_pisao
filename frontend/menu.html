@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu | Patacon Pisao</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="menu" class="page-shell page-menu">
+  <div class="bg-noise"></div>
+  <header class="topbar">
+    <a class="brand" href="index.html">
+      <span class="brand-mark"></span>
+      <span>Patacon Pisao</span>
+    </a>
+    <nav class="nav">
+      <a href="index.html">Inicio</a>
+      <a href="menu.html">Menu</a>
+      <a href="login.html">Ingresar</a>
+      <a class="nav-button" href="registro.html">Registro</a>
+    </nav>
+  </header>
+
+  <main class="menu-main">
+    <section class="menu-hero" data-tilt>
+      <div class="menu-hero-copy">
+        <p class="eyebrow">Menu interactivo</p>
+        <h1>Explora el menu como una vitrina digital lista para fotos grandes y venta rapida.</h1>
+        <p>
+          Filtra por categoria, busca al instante y arma tu pedido desde una interfaz mucho mas fuerte visualmente.
+        </p>
+      </div>
+
+      <div class="menu-tools">
+        <label class="search-shell">
+          <span>Buscar plato</span>
+          <input id="menu-search" type="search" placeholder="Ej: Burger XL, patacon, soda...">
+        </label>
+        <div id="menu-filters" class="filter-row"></div>
+      </div>
+    </section>
+
+    <section class="menu-layout">
+      <section class="catalog-shell">
+        <div id="productos" class="menu-categories"></div>
+      </section>
+
+      <aside class="cart-panel">
+        <div class="cart-top">
+          <div>
+            <p class="eyebrow">Pedido actual</p>
+            <h2>Tu carrito</h2>
+          </div>
+          <button id="cart-clear" class="ghost-button" type="button">Vaciar</button>
+        </div>
+
+        <div class="cart-summary">
+          <article class="summary-chip">
+            <span id="cart-count">0 productos</span>
+            <small>seleccionados</small>
+          </article>
+          <article class="summary-chip summary-chip--dark">
+            <span id="cart-total">$0</span>
+            <small>total estimado</small>
+          </article>
+        </div>
+
+        <div id="cart-items" class="cart-items empty-state">
+          Aun no agregas productos al carrito.
+        </div>
+
+        <form id="pedido-form" class="order-form">
+          <h3>Datos de entrega</h3>
+          <label>
+            Nombre
+            <input type="text" name="clienteNombre" required>
+          </label>
+          <label>
+            Correo
+            <input type="email" name="clienteEmail" required>
+          </label>
+          <label>
+            Telefono
+            <input type="text" name="clienteTelefono" required>
+          </label>
+          <label>
+            Direccion
+            <input type="text" name="clienteDireccion" required>
+          </label>
+          <label>
+            Observaciones
+            <textarea name="observaciones" rows="3" placeholder="Sin cebolla, salsa aparte, timbrar al llegar..."></textarea>
+          </label>
+          <button class="button primary" type="submit">Confirmar pedido</button>
+        </form>
+        <p id="pedido-message" class="form-message"></p>
+      </aside>
+    </section>
+
+    <section class="orders-section">
+      <div class="section-heading">
+        <p class="eyebrow">Actividad reciente</p>
+        <h2>Pedidos registrados</h2>
+        <p>Vista rapida del flujo que ya se esta almacenando en el sistema.</p>
+      </div>
+      <div id="pedidos-list" class="orders-grid"></div>
+    </section>
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>

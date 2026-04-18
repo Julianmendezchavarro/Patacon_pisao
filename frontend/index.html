@@ -1,14 +1,135 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Patacon Pisao</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body data-page="home" class="page-shell page-home">
+  <div class="bg-noise"></div>
+  <header class="topbar">
+    <a class="brand" href="index.html">
+      <span class="brand-mark"></span>
+      <span>Patacon Pisao</span>
+    </a>
+    <nav class="nav">
+      <a href="index.html">Inicio</a>
+      <a href="menu.html">Menu</a>
+      <a href="login.html">Ingresar</a>
+      <a class="nav-button" href="registro.html">Crear cuenta</a>
+    </nav>
+  </header>
 
-<h1>Bienvenido a Patacon Pisao</h1>
+  <main class="home-main">
+    <section class="hero-panel">
+      <div class="hero-copy">
+        <p class="eyebrow">Catalogo visual con personalidad y compra rapida</p>
+        <h1>Una pagina pensada para vender antojos con una presencia visual mucho mas dura.</h1>
+        <p class="hero-text">
+          Dejamos la base lista para que luego montes fotos grandes de los platos, con tarjetas de alto impacto, microinteracciones y una experiencia de pedido mucho mas clara para el usuario.
+        </p>
 
-<a href="login.html">Iniciar sesión</a><br>
-<a href="registro.html">Registrarse</a>
+        <div class="hero-actions">
+          <a class="button primary" href="menu.html">Ver menu</a>
+          <a class="button secondary" href="registro.html">Crear cuenta</a>
+        </div>
 
+        <div class="hero-stats">
+          <article class="stat-card" data-tilt>
+            <span data-home-products>48</span>
+            <small>productos activos</small>
+          </article>
+          <article class="stat-card" data-tilt>
+            <span data-home-categories>10</span>
+            <small>categorias visibles</small>
+          </article>
+          <article class="stat-card" data-tilt>
+            <span data-home-highlight>Patacones</span>
+            <small>categoria destacada</small>
+          </article>
+        </div>
+      </div>
+
+      <div class="hero-stage" data-tilt>
+        <div class="stage-glow stage-glow--amber"></div>
+        <div class="stage-glow stage-glow--mint"></div>
+
+        <article class="stage-card stage-card--main">
+          <div class="stage-frame">
+            <span class="stage-kicker">Foto protagonista</span>
+            <h2>Espacio hero para platos en 4K</h2>
+            <p>Aqui puedes montar la imagen grande del producto estrella con presencia total.</p>
+          </div>
+        </article>
+
+        <article class="stage-card stage-card--side stage-card--teal">
+          <span class="mini-badge">Menu vivo</span>
+          <strong data-home-side-a>48 productos listos</strong>
+        </article>
+
+        <article class="stage-card stage-card--side stage-card--red">
+          <span class="mini-badge">UX visual</span>
+          <strong>Capas, profundidad y tarjetas listas para fotos HQ</strong>
+        </article>
+      </div>
+    </section>
+
+    <section class="shortcut-band">
+      <a class="shortcut-card" href="menu.html?categoria=Patacones" data-tilt>
+        <span class="shortcut-tag">Top venta</span>
+        <h3>Patacones</h3>
+        <p>Perfectos para mostrar fotos con mucha textura y color.</p>
+      </a>
+      <a class="shortcut-card" href="menu.html?categoria=Hamburguesas" data-tilt>
+        <span class="shortcut-tag">Stack visual</span>
+        <h3>Hamburguesas</h3>
+        <p>Cards pensadas para panes, carnes y tomas hero de producto.</p>
+      </a>
+      <a class="shortcut-card" href="menu.html?categoria=Especiales" data-tilt>
+        <span class="shortcut-tag">Compartir</span>
+        <h3>Especiales</h3>
+        <p>Ideal para combos y platos grandes con composicion cinematica.</p>
+      </a>
+    </section>
+
+    <section class="experience-grid">
+      <article class="experience-card" data-tilt>
+        <p class="eyebrow">Visual listo</p>
+        <h3>Cards preparadas para imagenes reales</h3>
+        <p>Cuando cargues fotos de los platos, la interfaz ya tiene espacios grandes, overlays y sombras para que se vean premium.</p>
+      </article>
+      <article class="experience-card" data-tilt>
+        <p class="eyebrow">Interaccion</p>
+        <h3>Menu con busqueda y filtros</h3>
+        <p>El usuario puede llegar, filtrar rapido por categoria y armar el pedido sin perderse en una lista plana.</p>
+      </article>
+      <article class="experience-card" data-tilt>
+        <p class="eyebrow">Crecimiento</p>
+        <h3>Base para seguir montando cosas</h3>
+        <p>Esta capa visual ya soporta un siguiente paso fuerte: panel administrador, fotos del menu y estados de pedido mejores.</p>
+      </article>
+    </section>
+
+    <section class="showcase-strip">
+      <article class="showcase-tile showcase-tile--wide" data-tilt>
+        <span class="showcase-label">Foto grande</span>
+        <h3>Banner horizontal para el plato estrella del dia</h3>
+      </article>
+      <article class="showcase-tile showcase-tile--tall" data-tilt>
+        <span class="showcase-label">Combo</span>
+        <h3>Panel vertical para combos o promociones</h3>
+      </article>
+      <article class="showcase-tile" data-tilt>
+        <span class="showcase-label">Categoria</span>
+        <h3 data-home-side-b>Menu ordenado por categorias</h3>
+      </article>
+    </section>
+  </main>
+
+  <script src="main.js"></script>
 </body>
 </html>

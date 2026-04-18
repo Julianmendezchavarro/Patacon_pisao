@@ -1,5 +1,5 @@
 <?php
-include("conexion.php");
+$conn = new mysqli("localhost", "root", "", "patacon_pisao");
 
 $usuario = $_POST['usuario'];
 $clave = $_POST['clave'];
@@ -10,6 +10,6 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     header("Location: ../frontend/menu.html");
 } else {
-    echo "Usuario o contraseña incorrectos";
+    echo "Usuario incorrecto";
 }
 ?>

@@ -1,5 +1,59 @@
-<form action="../backend/login.php" method="POST">
-  <input type="text" name="usuario" placeholder="Usuario" required>
-  <input type="password" name="clave" placeholder="Contraseña" required>
-  <button type="submit">Ingresar</button>
-</form>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ingresar | Patacon Pisao</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="login" class="page-shell auth-body">
+  <div class="bg-noise"></div>
+  <main class="auth-layout">
+    <section class="auth-side" data-tilt>
+      <p class="eyebrow">Acceso visual</p>
+      <h1>Entra a una experiencia mas pulida y lista para crecer.</h1>
+      <p>
+        El proyecto ya tiene una capa visual mucho mas fuerte para que despues sumes fotos grandes del menu sin tener que rehacer toda la interfaz.
+      </p>
+
+      <div class="auth-side-cards">
+        <article class="auth-side-card">
+          <span class="mini-badge">UX</span>
+          <strong>Menu filtrable y carrito claro</strong>
+        </article>
+        <article class="auth-side-card auth-side-card--warm">
+          <span class="mini-badge">Fotos HD</span>
+          <strong>Tarjetas listas para mostrar platos con fuerza visual</strong>
+        </article>
+      </div>
+    </section>
+
+    <section class="auth-panel">
+      <a class="back-link" href="index.html">Volver al inicio</a>
+      <p class="eyebrow">Inicio de sesion</p>
+      <h2>Ingresa a tu cuenta</h2>
+      <p class="auth-copy">Guarda tus datos y agiliza tu siguiente pedido.</p>
+
+      <form id="login-form" class="auth-form">
+        <label>
+          Correo electronico
+          <input type="email" name="email" placeholder="correo@ejemplo.com" required>
+        </label>
+        <label>
+          Contrasena
+          <input type="password" name="password" placeholder="********" required>
+        </label>
+        <button class="button primary" type="submit">Ingresar</button>
+      </form>
+
+      <p id="login-message" class="form-message"></p>
+      <p class="auth-footer">Aun no tienes cuenta? <a href="registro.html">Creala aqui</a>.</p>
+    </section>
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>
