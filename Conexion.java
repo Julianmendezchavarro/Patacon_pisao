@@ -1,24 +1,24 @@
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.Connection;
-import java.sql.DriverManager;
 
 public class Conexion {
     public static void main(String[] args) {
+        // Carga el driver de MySQL para poder abrir la conexion.
         try {
-            // 👇 ESTA LÍNEA ES LA CLAVE
             Class.forName("com.mysql.cj.jdbc.Driver");
 
-            Connection con = DriverManager.getConnection(
-                "jdbc:mysql://localhost:3306/patacon_db",
+            // Abre la conexion con la misma base usada por el proyecto web.
+            try (Connection con = DriverManager.getConnection(
+                "jdbc:mysql://localhost:3306/patacon_pisao",
                 "root",
                 ""
-            );
-
-            System.out.println("Conectado correctamente 🔥");
-
+            )) {
+                // Muestra un mensaje si la conexion se hizo correctamente.
+                System.out.println("Conectado correctamente");
+            }
         } catch (Exception e) {
-            System.out.println("Error: " + e);
+            // Muestra el error en consola si la conexion falla.
+            System.out.println("Error: " + e.getMessage());
         }
     }
 }
