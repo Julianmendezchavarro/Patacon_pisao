@@ -26,11 +26,11 @@ const CATEGORY_CLASS_MAP = {
 };
 
 function formatCurrency(value) {
-  return new Intl.NumberFormat('es-CO', {
-    style: 'currency',
-    currency: 'COP',
+  const amount = new Intl.NumberFormat('es-CO', {
     maximumFractionDigits: 0
   }).format(Number(value || 0));
+
+  return `$${amount}`;
 }
 
 function getStoredJson(key, fallback) {
