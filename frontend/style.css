@@ -707,13 +707,24 @@ label textarea:focus {
 .product-top h3 {
   margin: 0;
   font-size: 1.15rem;
+  max-width: 15ch;
 }
 
 .product-price {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   white-space: nowrap;
+  padding: 10px 14px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, var(--orange), var(--red));
+  color: #fff;
   font-family: "Syne", sans-serif;
-  font-size: 1.15rem;
+  font-size: 1.02rem;
   font-weight: 800;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  box-shadow: 0 14px 24px rgba(219, 93, 69, 0.22);
 }
 
 .product-description {
@@ -806,6 +817,8 @@ label textarea:focus {
 .summary-chip span {
   font-family: "Syne", sans-serif;
   font-weight: 800;
+  line-height: 1.05;
+  font-variant-numeric: tabular-nums;
 }
 
 .summary-chip small {
@@ -815,6 +828,11 @@ label textarea:focus {
 .summary-chip--dark {
   color: #fff;
   background: linear-gradient(135deg, #1b2540, #121827);
+}
+
+.summary-chip--dark span {
+  font-size: 1.35rem;
+  letter-spacing: -0.03em;
 }
 
 .summary-chip--dark small {
@@ -847,8 +865,35 @@ label textarea:focus {
 }
 
 .cart-item-meta {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  margin-top: 6px;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: rgba(15, 123, 116, 0.08);
+  border: 1px solid rgba(15, 123, 116, 0.1);
   color: var(--muted);
-  font-size: 0.9rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.cart-item-total {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 108px;
+  padding: 8px 12px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(15, 123, 116, 0.12), rgba(255, 255, 255, 0.9));
+  color: var(--teal);
+  font-family: "Syne", sans-serif;
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  box-shadow: inset 0 0 0 1px rgba(15, 123, 116, 0.08);
 }
 
 .cart-controls {

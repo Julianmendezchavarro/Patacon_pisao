@@ -84,6 +84,11 @@ const RAW_PRODUCT_CATALOG = [
     { categoria: 'Sodas Italianas', nombre: 'Frutos Rojos', precio: 12000, descripcion: 'Soda italiana sabor frutos rojos.', imagen: null }
 ];
 
+const PRODUCT_CATALOG = RAW_PRODUCT_CATALOG.map((product) => ({
+    ...product,
+    imagen: product.imagen || CATEGORY_IMAGES[product.categoria] || 'https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=1200&q=80'
+}));
+
 module.exports = {
     CATEGORY_ORDER,
     PRODUCT_CATALOG

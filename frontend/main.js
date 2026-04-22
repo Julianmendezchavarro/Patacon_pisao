@@ -1,4 +1,11 @@
-const API_BASE = 'http://localhost:3000/api';
+const isLocalPreview =
+  ['localhost', '127.0.0.1'].includes(window.location.hostname) &&
+  window.location.port !== '3000';
+
+const API_BASE = window.__API_BASE__ ||
+  (window.location.protocol === 'file:' || isLocalPreview
+    ? 'http://localhost:3000/api'
+    : `${window.location.origin}/api`);
 const page = document.body.dataset.page;
 const STORAGE_KEYS = {
   user: 'patacon_user',
@@ -50,12 +57,18 @@ function setMessage(element, message, type = '') {
 }
 
 async function apiRequest(url, options = {}) {
-  const response = await fetch(url, {
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    ...options
-  });
+  let response;
+
+  try {
+    response = await fetch(url, {
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      ...options
+    });
+  } catch (error) {
+    throw new Error('No se pudo conectar con el servidor. Inicia MySQL en XAMPP y luego ejecuta el backend en el puerto 3000.');
+  }
 
   const data = await response.json().catch(() => ({}));
 
@@ -232,7 +245,7 @@ function renderCart(cart) {
           <strong>${item.nombre}</strong>
           <div class="cart-item-meta">${formatCurrency(item.precio)} c/u</div>
         </div>
-        <strong>${formatCurrency(item.cantidad * item.precio)}</strong>
+        <strong class="cart-item-total">${formatCurrency(item.cantidad * item.precio)}</strong>
       </div>
       <div class="cart-controls">
         <button class="qty-button" data-action="decrease" data-id="${item.id}" type="button">-</button>
